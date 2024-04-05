@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="Congrats1.css">
+    <script src="Congrats1.js"></script>
+</head>
+<body>
+    <div id="Popup">
+        <div id="Head">กรุณาชำระเงิน!</div>
+        <p id="Passage">กรุณาเลือกประเภทวันเช่า</p>
+
+        <div>
+            <select name="payment" id="Payment" onchange="Method(value)">
+                <option value="">-- กรุณาเลือกวันที่เช่า --</option>
+                <option value="Tues">อังคาร</option>
+                <option value="Fri">ศุกร์</option>
+            </select>
+        </div>
+        
+        <img id="QR" src="">
+        
+        <div>
+            <input type="file" id="myfile" name="myfile">
+        </div>
+
+        <div>
+            <button id="Submit">Submit</button>
+        </div>
+    </div>
+</body>
+</html>
