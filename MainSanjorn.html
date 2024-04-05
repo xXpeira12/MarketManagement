@@ -9,13 +9,19 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
       crossorigin="anonymous"
     ></script>
@@ -24,88 +30,170 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
     <title>Main-Sanjorn</title>
+    <style>
+      /* Custom styling for datepicker */
+      .datepicker-dropdown {
+        border: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .datepicker-dropdown table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .datepicker-dropdown table th,
+      .datepicker-dropdown table td {
+        padding: 0.5rem;
+        text-align: center;
+      }
+      .datepicker-dropdown table th {
+        font-weight: bold;
+      }
+      .datepicker-dropdown table td {
+        border: none;
+      }
+      .datepicker-dropdown table td.today {
+        background-color: #f0f0f0;
+        border-radius: 50%;
+      }
+      .datepicker-dropdown table td.active,
+      .datepicker-dropdown table td.active:hover,
+      .datepicker-dropdown table td.active.disabled,
+      .datepicker-dropdown table td.active.disabled:hover {
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 50%;
+      }
+      .datepicker-dropdown table td span {
+        display: block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 50%;
+      }
+      .datepicker-dropdown table td span:hover {
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-sm">
-          <p class="text-start">สัญจร</p>
-        </div>
-        <div class="col-lg text-center">
-          <p class="text-center">Main</p>
-        </div>
-        <div class="col-sm">
-          <p class="text-end">ออกจากระบบ</p>
+      <!-- First row -->
+      <div class="row mt-4">
+        <div class="col text-start text-success">สัญจร</div>
+        <div class="col text-center" style="font-size: xx-large; font-weight: 800;">Main</div>
+        <div class="col text-right text-success"><a href="Loginpage.html">ออกจากระบบ</a></div>
+      </div>
+      <!-- Second row -->
+      <div class="row mt-5 justify-content-center">
+        <div class="col-md-6">
+          <!-- Calendar Selection -->
+          <div class="input-group">
+            <input type="text" class="form-control" id="date" placeholder="กรุณาเลือกวันที่จอง">
+            <div class="input-group-append" id="calendarBtn">
+              <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md">
-          <h4 class="text-start">กรุณาเลือกวันที่จอง</h4>
+      <!-- Third row -->
+      <div class="row mt-5 justify-content-center">
+        <div class="text-center">  
+            <img src="area.jpeg" alt="Area Image" class="img-fluid w-50" style="border-radius: 20%;">
         </div>
-        <div class="col-md">
-          <p class="text-end">ปฎิทิน</p>
+        <div>
+            <table class="table table-borderless">
+                <tbody>
+                    <tr>
+                        <td>A19</td>
+                        <td colspan="3" class="text-end merged-cell"><a href="Congrats1.html">จอง</a></td>
+                    </tr>
+                    <tr>
+                        <td>.........................</td>
+                    </tr>
+                    <tr>
+                        <td>17/06/22</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
       </div>
-      <div class="row"></div>
     </div>
     <div class="fixed-bottom w-100">
-      <div
-        class="row text-center justify-content-center mb-6 border-top"
-        style="
-          gap: 15vw;
-          background-color: #f8f9fa;
-          height: 40px;
-          padding-top: 10px;
-          padding-bottom: 10px;
-        "
-      >
-        <button
+        <div
+          class="row text-center justify-content-center mb-6 border-top"
           style="
-            border-radius: 100%;
-            height: 20px;
-            width: 20px;
-            background-color: green;
-            border-color: transparent;
+            gap: 15vw;
+            background-color: #f8f9fa;
+            height: 40px;
+            padding-top: 10px;
+            padding-bottom: 10px;
           "
-        ></button>
-        <button
-          style="
-            border-radius: 100%;
-            height: 20px;
-            width: 20px;
-            background-color: gainsboro;
-            border-color: transparent;
-          "
-        ></button>
-        <button
-          style="
-            border-radius: 100%;
-            height: 20px;
-            width: 20px;
-            background-color: gainsboro;
-            border-color: transparent;
-          "
-        ></button>
-        <button
-          style="
-            border-radius: 100%;
-            height: 20px;
-            width: 20px;
-            background-color: gainsboro;
-            border-color: transparent;
-          "
-        ></button>
-        <button
-          style="
-            border-radius: 100%;
-            height: 20px;
-            width: 20px;
-            background-color: gainsboro;
-            border-color: transparent;
-          "
-        ></button>
-      </div>
+        >
+          <button
+            style="
+              border-radius: 100%;
+              height: 20px;
+              width: 20px;
+              background-color: green;
+              border-color: transparent;
+            "
+          ></button>
+          <button
+            style="
+              border-radius: 100%;
+              height: 20px;
+              width: 20px;
+              background-color: gainsboro;
+              border-color: transparent;
+            "
+          ></button>
+          <button
+            style="
+              border-radius: 100%;
+              height: 20px;
+              width: 20px;
+              background-color: gainsboro;
+              border-color: transparent;
+            "
+          ></button>
+          <button
+            style="
+              border-radius: 100%;
+              height: 20px;
+              width: 20px;
+              background-color: gainsboro;
+              border-color: transparent;
+            "
+          ></button>
+          <button
+            style="
+              border-radius: 100%;
+              height: 20px;
+              width: 20px;
+              background-color: gainsboro;
+              border-color: transparent;
+            "
+          ></button>
+        </div>
     </div>
+    <script>
+      $(document).ready(function() {
+        $('#calendarBtn').click(function() {
+          $('#date').datepicker('show');
+        });
+
+        $('#date').datepicker({
+          format: 'mm/dd/yyyy',
+          startDate: '01/01/2010',
+          endDate: '12/31/2020',
+          todayBtn: 'linked',
+          todayHighlight: true,
+          autoclose: true
+        });
+      });
+    </script>
   </body>
 </html>

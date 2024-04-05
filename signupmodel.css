@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Rowdies:wght@300;400;700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Single+Day&display=swap');
+
+* {
+    font-family: "Inter", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.signup {
+    width: 113px;
+    height: 36px;
+    left: 45%;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 36.31px;
+    margin-top: 1%;
+    position: fixed;
+}
+
+.signcontainer {
+    width: 43px;
+    height: 19px;
+    top: 8px;
+    left: 90%;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 1.7%;
+    line-height: 19.36px;
+    text-align: right;
+    position: fixed;
+    color: #5DB075;
+}
+
+.input1 {
+    height: 100vh;
+    border: 1px;
+    color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin: auto;
+    gap: 15px;
+}
+
+input {
+    margin-bottom: 1%;
+    border-radius: 5px;
+}
+
+::ng-deep select{
+    padding: 0 20px !important;
+    min-width: 100px !important;
+    height: 20px !important;
+}
