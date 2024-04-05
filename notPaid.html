@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <style>
+        #topmenu {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+        }
+        #filter, #left {
+            color: #85C285;
+        }
+
+        #box1 {
+            text-align: center;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            padding: 10px;
+        }
+        #pay {
+            border-radius: 10px;
+            background-color: #85C285;
+            color: white;
+            border-color: transparent;
+        }
+
+        #box2 {
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        #cancel {
+            border-radius: 10px;
+            background-color: red;
+            display: block;
+            color: white;
+            margin-right: 0px;
+            border-color: transparent;
+        }
+        #cc {
+            display: flex;
+            justify-content: flex-end;
+        }
+        #date {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="topmenu">
+        <div id="left">
+            <h4>ประจำ</h4>
+        </div>
+        <div id="main">
+            <h1>Main</h1>
+        </div>
+        <div id="filter">
+            <h4>Filter</h4>
+        </div>
+    </div>
+    <div>
+        <div id="box1">
+            <h2 style="color: red;">คุณยังไม่ชำระเงิน!</h2>
+            <button id="pay">ชำระเงิน</button>
+        </div>
+        <div id="box2">
+            <div>
+                <h3>A19</h3>
+            </div>
+            <div id="date">
+                <input type="date" placeholder="กรุณาเลือกวันที่ยกเลิก">
+            </div>
+            <div id="cc">
+                <button id="cancel">ยกเลิก</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
